@@ -16,6 +16,7 @@ jobs:
             python --version
             pyenv versions
             pyenv local 3.7.0
+            pip install --upgrade pip
 
       - run:
           name: Install docker-squash
