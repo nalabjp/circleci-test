@@ -20,8 +20,8 @@ jobs:
       - run:
           name: Install docker-squash
           command: |
-            pip3 install docker==4.4.4
-            pip3 install docker-squash
+            pip install docker==4.4.4
+            pip install docker-squash
           
 
 workflows:
