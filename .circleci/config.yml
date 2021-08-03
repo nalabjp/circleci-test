@@ -12,7 +12,7 @@ jobs:
           command: |
             python --version
             pyenv versions
-            pyenv local 3.7.0
+            pyenv local 3.6.2
             pyenv versions
             pip install --upgrade pip
 
