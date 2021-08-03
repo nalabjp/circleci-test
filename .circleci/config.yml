@@ -13,13 +13,14 @@ jobs:
       
       - run:
           command: |
-            python3 --version
+            python --version
+            pyenv versions
 
       - run:
           name: Install docker-squash
           command: |
-            pip install docker==4.4.4
-            pip install docker-squash
+            pip3 install docker==4.4.4
+            pip3 install docker-squash
           
 
 workflows:
