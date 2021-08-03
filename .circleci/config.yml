@@ -1,0 +1,29 @@
+orbs:
+  python: circleci/python@1.4.0
+
+version: 2.1
+
+jobs:
+  install:
+    executor: python/default
+    steps:
+      - checkout
+
+      - python/install-packages:
+          pkg-manager: pip
+      
+      - run:
+          command: |
+            python --verstion
+
+      - run:
+          name: Install docker-squash
+          command: |
+            pip install docker==4.4.4
+            pip install docker-squash
+          
+
+workflows:
+  build:
+    jobs:
+      - install
