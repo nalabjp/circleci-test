@@ -1,0 +1,27 @@
+version: 2.1
+
+jobs:
+  install:
+    machine:
+      image: ubuntu-1604:201903-01
+
+    steps:
+      - checkout
+
+      - run:
+          command: |
+            python --version
+            pyenv versions
+            pyenv local 3.6.5
+            pyenv versions
+            pip install --upgrade pip
+
+      - run:
+          name: Install docker-squash
+          command: |
+            pip install docker==4.4.4 docker-squash
+
+workflows:
+  build:
+    jobs:
+      - install
