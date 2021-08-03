@@ -1,6 +1,3 @@
-orbs:
-  python: circleci/python@1.4.0
-
 version: 2.1
 
 jobs:
@@ -16,6 +13,7 @@ jobs:
             python --version
             pyenv versions
             pyenv local 3.7.0
+            pyenv versions
             pip install --upgrade pip
 
       - run:
