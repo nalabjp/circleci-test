@@ -5,13 +5,15 @@ version: 2.1
 
 jobs:
   install:
-    executor: python/default
+    machine:
+      docker_layer_caching: true
+      
     steps:
       - checkout
       
       - run:
           command: |
-            python --verstion
+            python --version
 
       - run:
           name: Install docker-squash
